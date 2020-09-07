@@ -6,6 +6,8 @@ then:
 
 ```npm start```
 
+# Please note:
+For simplicity running the challenge the .env file is uploaded to the repo (it's not a security mistake). Also there is a single global .env file for the same reason.
 
 # Test requirements
 
