@@ -7,7 +7,9 @@ then:
 ```npm start```
 
 # Please note:
-For simplicity running the challenge the .env file is uploaded to the repo (it's not a security mistake). Also there is a single global .env file for the same reason.
+For simplicity running the challenge the .env file is uploaded to the repo (it's not a security mistake).
+
+To not spend too much time on styling I decided to display the minimum amount data, only the film titles. If you were expecting more data to be displayed as a demonstration of something, please let me know, I can extend the challenge in any direction if it's required.
 
 # Test requirements
 
