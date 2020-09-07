@@ -2,9 +2,8 @@ import React, { FC, memo, useEffect, useState } from 'react';
 import { hot } from 'react-hot-loader';
 import { firstBy } from 'thenby';
 import { Film } from '../../../api/tools/typings';
-import { Column } from '../../common/Column/Column';
-import { Row } from '../../common/Row/Row';
 import FilmItem from './FilmItem/FilmItem';
+import { FilmListContainer, SortButton, SortControlsContainer } from './FilmList.styles';
 
 interface PropsFilmsList {
    films: Film[];
@@ -29,15 +28,15 @@ export const FilmsList: FC<PropsFilmsList> = memo(({ films }) => {
       filmsUnsorted && [...filmsUnsorted].sort(firstBy(f => f[sortBy]));
 
    return (
-      <Column>
-         <Row>
+      <FilmListContainer>
+         <SortControlsContainer>
             Sort by:
-            <button onClick={() => setSortBy('title')}>Title</button>
-            <button onClick={() => setSortBy('release_date')}>Release Date</button>
-         </Row>
+            <SortButton onClick={() => setSortBy('title')}>Title</SortButton>
+            <SortButton onClick={() => setSortBy('release_date')}>Release Date</SortButton>
+         </SortControlsContainer>
          {filmsSorted &&
             filmsSorted.map(filmData => <FilmItem key={filmData.episode_id} filmData={filmData} />)}
-      </Column>
+      </FilmListContainer>
    );
 });
 

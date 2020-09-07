@@ -2,6 +2,7 @@ import React, { FC, memo } from 'react';
 import { hot } from 'react-hot-loader';
 import { Film } from '../../../../api/tools/typings';
 import { Row } from '../../../common/Row/Row';
+import { FilmItemContainer } from './FilmItem.styles';
 
 interface PropsFilmItem {
    filmData: Film;
@@ -9,9 +10,9 @@ interface PropsFilmItem {
 
 export const FilmItem: FC<PropsFilmItem> = memo(({ filmData }) => {
    return (
-      <Row>
-         {filmData.title} {filmData.release_date}
-      </Row>
+      <FilmItemContainer>
+         <Row>{filmData.title}</Row>
+      </FilmItemContainer>
    );
 });
 

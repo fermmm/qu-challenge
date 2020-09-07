@@ -3,12 +3,13 @@ import { Theme } from './typings/Theme';
 export const defaultTheme: Theme = {
    colors: {
       background1: '#FFFFFF',
+      background2: '#efefef',
       text1: '#A8A8A8',
       scrollbar: '#FFFFFF',
       scrollbarThumb: '#565656',
    },
    shadows: {
-      elevation1: '1px 1px 6px 0px #00000012',
+      elevation1: '1px 10px 0px 0px #00000024;',
    },
    fonts: {
       font1: '"Montserrat", sans-serif',
@@ -18,6 +19,6 @@ export const defaultTheme: Theme = {
       lineHeight1: '21px',
    },
    borders: {
-      borderRadius1: '5px',
+      borderRadius1: '20px',
    },
 };

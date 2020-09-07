@@ -1,8 +1,8 @@
 import React, { FC, useEffect } from 'react';
 import { hot } from 'react-hot-loader';
 import { useFilms } from '../../../api/films';
-import { Column } from '../../common/Column/Column';
 import { FilmsList } from '../FilmsList/FilmsList';
+import { MainContainer } from './Main.styles';
 
 export const Main: FC = () => {
    const [request, doFetch] = useFilms();
@@ -12,9 +12,9 @@ export const Main: FC = () => {
    }, []);
 
    return (
-      <Column>
+      <MainContainer>
          <FilmsList films={request.data?.results} />
-      </Column>
+      </MainContainer>
    );
 };
 
