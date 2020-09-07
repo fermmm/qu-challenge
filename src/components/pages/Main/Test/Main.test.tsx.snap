@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> Renders correctly 1`] = `"<div class=\\"Mainstyles__MainContainer-ipmq2m-0 kZAigZ\\"><div class=\\"FilmListstyles__FilmListContainer-sc-1g4vwsu-0 bKKCvi\\"><div class=\\"FilmListstyles__SortControlsContainer-sc-1g4vwsu-1 hpWsaf\\">Sort by:<button class=\\"FilmListstyles__SortButton-sc-1g4vwsu-2 hVlahb\\">Title</button><button class=\\"FilmListstyles__SortButton-sc-1g4vwsu-2 hVlahb\\">Release Date</button></div></div></div>"`;
