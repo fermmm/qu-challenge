@@ -1,4 +1,3 @@
-import moment from 'moment';
 import React, { FC, memo } from 'react';
 import { hot } from 'react-hot-loader';
 import { Film } from '../../../../api/tools/typings';

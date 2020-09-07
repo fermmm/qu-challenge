@@ -20,9 +20,10 @@ export const FilmsList: FC<PropsFilmsList> = memo(({ films }) => {
 
    /**
     * Here I could implement my own sort function but I decided to use 
-    * the "firstBy" module because in my opinion it's a better demonstration
+    * the "thenby" module because in my opinion it's a better demonstration
     * since this module is very powerful to implement very sophisticated 
-    * sorting logic in no time.
+    * composed sorting in no time:
+    * https://github.com/Teun/thenBy.js/tree/master
     */
    const sortList = (filmsUnsorted: Film[]) => 
       filmsUnsorted && [...filmsUnsorted].sort(firstBy(f => f[sortBy]));
