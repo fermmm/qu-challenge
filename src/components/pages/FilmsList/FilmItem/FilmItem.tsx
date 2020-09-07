@@ -8,7 +8,11 @@ interface PropsFilmItem {
 }
 
 export const FilmItem: FC<PropsFilmItem> = memo(({ filmData }) => {
-   return <Row>{filmData.title} {filmData.release_date}</Row>;
+   return (
+      <Row>
+         {filmData.title} {filmData.release_date}
+      </Row>
+   );
 });
 
 export default hot(module)(FilmItem);

@@ -1,4 +1,4 @@
-import React, { FC, memo, useState, useEffect } from 'react';
+import React, { FC, memo, useEffect, useState } from 'react';
 import { hot } from 'react-hot-loader';
 import { firstBy } from 'thenby';
 import { Film } from '../../../api/tools/typings';
@@ -19,13 +19,13 @@ export const FilmsList: FC<PropsFilmsList> = memo(({ films }) => {
    }, [films, sortBy]);
 
    /**
-    * Here I could implement my own sort function but I decided to use 
+    * Here I could implement my own sort function but I decided to use
     * the "thenby" module because in my opinion it's a better demonstration
-    * since this module is very powerful to implement very sophisticated 
+    * since this module is very powerful to implement very sophisticated
     * composed sorting in no time:
     * https://github.com/Teun/thenBy.js/tree/master
     */
-   const sortList = (filmsUnsorted: Film[]) => 
+   const sortList = (filmsUnsorted: Film[]) =>
       filmsUnsorted && [...filmsUnsorted].sort(firstBy(f => f[sortBy]));
 
    return (
@@ -35,7 +35,8 @@ export const FilmsList: FC<PropsFilmsList> = memo(({ films }) => {
             <button onClick={() => setSortBy('title')}>Title</button>
             <button onClick={() => setSortBy('release_date')}>Release Date</button>
          </Row>
-         {filmsSorted && filmsSorted.map(filmData => <FilmItem key={filmData.episode_id} filmData={filmData} />)}
+         {filmsSorted &&
+            filmsSorted.map(filmData => <FilmItem key={filmData.episode_id} filmData={filmData} />)}
       </Column>
    );
 });
